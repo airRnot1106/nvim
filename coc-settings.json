@@ -1,7 +1,0 @@
-{
-  "coc.preferences.formatOnSave": true,
-  "Lua.workspace.checkThirdParty": "Disable",
-  "sumneko-lua.enableNvimLuaDev": true,
-  "pylsp.builtin.enableInstallPylsIsort": true,
-  "pylsp.builtin.enableInstallPythonLspBlack": true,
-}
