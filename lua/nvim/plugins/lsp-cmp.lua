@@ -29,25 +29,27 @@ return {
                     local opts = {
                         on_attach = function(client)
                             -- Reference highlight
-                            if client.supports_method "textDocument/documentHighlight" then
-                                vim.cmd [[
+                            vim.cmd [[
                                   set updatetime=200
                                   highlight LspReferenceRead  cterm=underline ctermfg=1 ctermbg=8 gui=underline guibg=#104040
                                   highlight LspReferenceWrite cterm=underline ctermfg=1 ctermbg=8 gui=underline guibg=#104040
                                 ]]
-                                vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-                                    group = vim.api.nvim_create_augroup("lsp_document_highlight_on_hold", {}),
-                                    callback = function()
+                            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                                group = vim.api.nvim_create_augroup("lsp_document_highlight_on_hold", {}),
+                                callback = function()
+                                    if client.supports_method "textDocument/documentHighlight" then
                                         vim.lsp.buf.document_highlight()
-                                    end,
-                                })
-                                vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-                                    group = vim.api.nvim_create_augroup("lsp_document_highlight_on_moved", {}),
-                                    callback = function()
+                                    end
+                                end,
+                            })
+                            vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                                group = vim.api.nvim_create_augroup("lsp_document_highlight_on_moved", {}),
+                                callback = function()
+                                    if client.supports_method "textDocument/documentHighlight" then
                                         vim.lsp.buf.clear_references()
-                                    end,
-                                })
-                            end
+                                    end
+                                end,
+                            })
                         end,
                         capabilities = require("cmp_nvim_lsp").default_capabilities(),
                     }
