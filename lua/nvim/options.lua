@@ -27,7 +27,7 @@ local options = {
     showmatch = true,
     relativenumber = true,
     guifont = "Hack Nerd font",
-    scrolloff = 4,
+    scrolloff = 12,
 
     -- editor
     whichwrap = "b,s,h,l,[,],<,>,~",
