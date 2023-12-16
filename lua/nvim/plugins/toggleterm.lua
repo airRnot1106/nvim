@@ -2,9 +2,7 @@ return {
     {
         "akinsho/toggleterm.nvim",
         keys = {
-            {
-                "<F7>",
-            },
+            { "<F7>" },
         },
         version = "*",
         config = function()
