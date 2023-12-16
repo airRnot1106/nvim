@@ -30,4 +30,12 @@ return {
             require("mini.surround").setup()
         end,
     },
+    {
+        "echasnovski/mini.pairs",
+        version = false,
+        event = { "InsertEnter" },
+        config = function()
+            require("mini.pairs").setup()
+        end,
+    },
 }
