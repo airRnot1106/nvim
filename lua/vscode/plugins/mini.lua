@@ -2,7 +2,6 @@ return {
     {
         "echasnovski/mini.comment",
         version = false,
-        -- event = { "BufReadPre", "BufNewFile" },
         config = function()
             require("mini.comment").setup {
                 mappings = {
@@ -14,34 +13,11 @@ return {
             }
         end,
     },
-    -- {
-    --     "echasnovski/mini.indentscope",
-    --     version = false,
-    --     -- event = { "BufReadPre", "BufNewFile" },
-    --     config = function()
-    --         require("mini.indentscope").setup()
-    --     end,
-    -- },
-    -- {
-    --     "echasnovski/mini.pairs",
-    --     version = false,
-    --     -- event = { "InsertEnter" },
-    --     config = function()
-    --         require("mini.pairs").setup {
-    --             modes = {
-    --                 insert = true,
-    --                 command = true,
-    --                 terminal = true,
-    --             },
-    --         }
-    --     end,
-    -- },
-    -- {
-    --     "echasnovski/mini.surround",
-    --     version = false,
-    --     -- event = { "InsertEnter" },
-    --     config = function()
-    --         require("mini.surround").setup()
-    --     end,
-    -- },
+    {
+        "echasnovski/mini.surround",
+        version = false,
+        config = function()
+            require("mini.surround").setup()
+        end,
+    },
 }
