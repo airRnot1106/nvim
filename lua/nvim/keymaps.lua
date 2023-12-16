@@ -41,7 +41,7 @@ keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
 
 -- filer
 keymap("n", "<Leader>e", "<Cmd>Fern . -reveal=% -drawer -toggle -width=40<CR>", { noremap = true, silent = true })
-keymap("n", "<leader>o", "", {
+keymap("n", "<Leader>o", "", {
     callback = function()
         if vim.bo.filetype == "fern" then
             vim.cmd.wincmd "p"
