@@ -1,9 +1,0 @@
-{
-  "categories": [
-    "Snippets"
-  ],
-  "name": "my-snippets",
-  "contributes": {
-    "snippets": []
-  }
-}
