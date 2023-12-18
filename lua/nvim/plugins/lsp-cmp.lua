@@ -182,12 +182,12 @@ return {
                     ["<C-e>"] = map.abort(),
                     ["<CR>"] = map.confirm { select = false },
                 },
-                sources = cmp.config.sources({
+                sources = cmp.config.sources {
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
-                }, {
                     { name = "buffer" },
-                }),
+                    { name = "path" },
+                },
             }
 
             cmp.setup.cmdline(":", {
