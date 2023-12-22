@@ -40,18 +40,6 @@ keymap("x", "<C-d>", "d", { noremap = true, silent = true })
 -- buffer
 keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
 
--- autocomplete
-keymap("i", "<C-h>", 'coc#pum#visible() ? coc#pum#next(1): "<C-h>"', { expr = true, noremap = true, silent = true })
-keymap("i", "<C-k>", 'coc#pum#visible() ? coc#pum#prev(1): "<C-k>"', { expr = true, noremap = true, silent = true })
-keymap(
-    "i",
-    "<CR>",
-    'coc#pum#visible() ? coc#pum#confirm() : "<C-g>u<CR><C-r>=coc#on_enter()<CR>"',
-    { expr = true, noremap = true, silent = true }
-)
-keymap("i", "<Esc>", 'coc#pum#visible() ? coc#pum#cancel() : "<Esc>"', { expr = true, noremap = true, silent = true })
-keymap("n", "<C-k>", "<Cmd>call CocActionAsync('doHover')<CR>", { noremap = true, silent = true })
-
 -- filer
 keymap("n", "<Leader>e", "<Cmd>Fern . -reveal=% -drawer -toggle -width=40<CR>", { noremap = true, silent = true })
 keymap("n", "<leader>o", "", {
