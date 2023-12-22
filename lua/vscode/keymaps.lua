@@ -57,3 +57,6 @@ keymap(
     "<Cmd>call VSCodeNotify('workbench.files.action.focusFilesExplorer')<CR>",
     { noremap = true, silent = true }
 )
+
+-- jumpy
+keymap("n", "<Leader><Leader>w", "<Cmd>call VSCodeNotify('jumpy2.toggle')<CR>", { noremap = true, silent = true })
