@@ -19,13 +19,6 @@ return {
                 { expr = true, noremap = true, silent = true }
             )
             keymap("n", "<C-k>", "<Cmd>call CocActionAsync('doHover')<CR>", { noremap = true, silent = true })
-
-            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-                group = vim.api.nvim_create_augroup("coc_hover", {}),
-                callback = function()
-                    vim.api.nvim_command "call CocActionAsync('doHover')"
-                end,
-            })
         end,
     },
 }
