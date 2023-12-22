@@ -19,6 +19,7 @@ return {
                 { expr = true, noremap = true, silent = true }
             )
             keymap("n", "<C-k>", "<Cmd>call CocActionAsync('doHover')<CR>", { noremap = true, silent = true })
+            keymap("n", "<Leader>.", "<Plug>(coc-codeaction-cursor)", { noremap = true, silent = true })
         end,
     },
 }
