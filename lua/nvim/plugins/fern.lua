@@ -8,8 +8,7 @@ return {
             "lambdalisue/fern-git-status.vim",
             "lambdalisue/fern-hijack.vim",
         },
-        -- cmd = { "Fern" },
-        lazy = false,
+        event = { "BufEnter" },
         config = function()
             vim.g["fern#default_hidden"] = 1
             vim.g["fern#disable_default_mappings"] = 1
