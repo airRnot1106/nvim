@@ -53,3 +53,14 @@ keymap("n", "<leader>o", "", {
     noremap = true,
     silent = true,
 })
+
+-- telescope
+keymap("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>gs", "<Cmd>Telescope git_status<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>gl", "<Cmd>Telescope git_commits<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>fo", "<Cmd>Telescope oldfiles<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>fv", "<Cmd>Telescope vim_options<CR>", { noremap = true, silent = true })
+keymap("n", "<Leadder>fk", "<Cmd>Telescope keymaps<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>fr", "<Cmd>Telescope registers<CR>", { noremap = true, silent = true })
