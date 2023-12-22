@@ -1,6 +1,5 @@
 {
   "coc.preferences.formatOnSave": true,
   "sumneko-lua.enableNvimLuaDev": true,
-  "pylsp.builtin.enableInstallPylsIsort": true,
-  "pylsp.builtin.enableInstallPythonLspBlack": true,
+  "ruff.autoFixOnSave": true
 }
